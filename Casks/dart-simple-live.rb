@@ -6,4 +6,9 @@ cask "dart-simple-live" do
   homepage "https://github.com/xiaoyaocz/dart_simple_live"
 
   app "Simple Live.app"
+
+  zap trash: [
+    "~/Library/Containers/com.xycz.simpleLiveApp",
+    "~/Library/Application Scripts/com.xycz.simpleLiveApp",
+  ]
 end
