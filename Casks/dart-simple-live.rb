@@ -1,4 +1,4 @@
-cask "simple_live" do
+cask "dart-simple-live" do
   version "1.7.5"
   revision "10705"
   url "https://github.com/xiaoyaocz/dart_simple_live/releases/download/v#{version}/simple_live_app-#{version}+#{revision}-macos.dmg"
