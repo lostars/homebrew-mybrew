@@ -5,6 +5,6 @@ cask "cemu-emulator" do
   desc "Cemu - Wii U emulator"
   homepage "https://github.com/cemu-project/Cemu"
 
-  app "Cemu Emulator"
+  app "Cemu.app"
 
 end
