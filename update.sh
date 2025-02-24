@@ -26,9 +26,9 @@ function update() {
   done
 }
 
-if [ ! -d "output" ]; then
-    mkdir "output"
-fi
+#if [ ! -d "output" ]; then
+#    mkdir "output"
+#fi
 
 for config in $(jq -c '.config[]' "config.json"); do
   name=$(echo "$config" | jq -r '.name')
