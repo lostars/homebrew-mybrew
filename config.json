@@ -1,0 +1,12 @@
+{
+  "config": [
+    {
+      "name": "Casks/cemu-emulator.rb",
+      "version": "-([0-9]\\.[0-9])-macos.*\\.dmg"
+    },
+    {
+      "name": "Casks/dart-simple-live.rb",
+      "version": "-([0-9]\\.[0-9]\\.[0-9]).*-macos\\.dmg"
+    }
+  ]
+}
