@@ -26,9 +26,9 @@ function update() {
   done
 }
 
-#if [ ! -d "output" ]; then
-#    mkdir "output"
-#fi
+if [ ! -d "output" ]; then
+    mkdir "output"
+fi
 
 for config in $(jq -c '.config[]' "config.json"); do
   name=$(echo "$config" | jq -r '.name')
@@ -38,7 +38,7 @@ for config in $(jq -c '.config[]' "config.json"); do
   user=$(echo "$repoUrl" | sed -n 's|https://github.com/\([^/]*\)/\([^/]*\)|\1|p')
   repo=$(echo "$repoUrl" | sed -n 's|https://github.com/\([^/]*\)/\([^/]*\)|\2|p')
 
-#  update "$user" "$repo" "$name" "$version"
+  update "$user" "$repo" "$name" "$version"
 done
 
 exit 0
