@@ -20,7 +20,8 @@ jobs:
         run: |
           chmod +x update.sh
           ./update.sh
-          if git diff --quiet; then
+          status=$(cat output/status.txt)
+          if [ "$status" == "true" ]; then
             mkdir -p ~/.ssh
             echo "$MY_BREW_KEY" > ~/.ssh/id_rsa
             chmod 600 ~/.ssh/id_rsa
@@ -30,6 +31,4 @@ jobs:
             git add Casks/*
             git commit -m 'cron updates'
             git push
-          else
-            echo 'no updates'
           fi

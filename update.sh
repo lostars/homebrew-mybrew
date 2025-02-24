@@ -21,6 +21,7 @@ function update() {
         echo "$filename no updates current version: $version"
       else
         sed -i "s/version \"$v\"/version \"$version\"/" "$filename"
+        echo "true" > output/status.txt
         echo "$filename update version: from $v => $version"
       fi
     fi
@@ -41,5 +42,3 @@ for config in $(jq -c '.config[]' "config.json"); do
 
   update "$user" "$repo" "$name" "$version"
 done
-
-exit 0
