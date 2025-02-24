@@ -27,5 +27,5 @@ jobs:
             git config --global user.email "746320542jn@gmail.com"
             git add Casks/*
             git commit -m 'cron updates'
-            git push git@github.com/${{ github.repository }}.git
+            git push git@github.com:${{ github.repository }}.git
           fi
