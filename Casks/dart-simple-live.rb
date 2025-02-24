@@ -1,6 +1,7 @@
 cask "dart-simple-live" do
   version "1.7.6"
-  url "https://github.com/xiaoyaocz/dart_simple_live/releases/download/v#{version}/simple_live_app-#{version}+10706-macos.dmg"
+  version_with_zeros = version.tr('.', '0')
+  url "https://github.com/xiaoyaocz/dart_simple_live/releases/download/v#{version}/simple_live_app-#{version}+#{version_with_zeros}-macos.dmg"
   name "simple_live"
   desc "简简单单的看直播"
   homepage "https://github.com/xiaoyaocz/dart_simple_live"
