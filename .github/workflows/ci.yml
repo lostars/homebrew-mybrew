@@ -6,31 +6,32 @@ on:
   push:
     branches:
       - main
-  workflow_dispatch:
 
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-        with:
-          token: ${{ secrets.GITHUB_TOKEN }}
 
       - name: update
         env:
           MY_BREW_KEY: ${{ secrets.MY_BREW_KEY }}
         run: |
-          chmod +x update.sh
-          ./update.sh
-          status=$(cat output/status.txt)
-          if [ "$status" == "true" ]; then
-            mkdir -p ~/.ssh
-            echo "$MY_BREW_KEY" > ~/.ssh/id_rsa
-            chmod 600 ~/.ssh/id_rsa
-            ssh-keyscan github.com >> ~/.ssh/known_hosts
-            git config --global user.name "lostars"
-            git config --global user.email "746320542jn@gmail.com"
-            git add Casks/*
-            git commit -m 'cron updates'
-            git push
+          if [ "${{ github.event.head_commit.message }}" == "cron updates" ]; then
+            echo 'cron skip update...'
+          else
+            chmod +x update.sh
+            ./update.sh
+            status=$(cat output/status.txt)
+            if [ "$status" == "true" ]; then
+              mkdir -p ~/.ssh
+              echo "$MY_BREW_KEY" > ~/.ssh/id_rsa
+              chmod 600 ~/.ssh/id_rsa
+              ssh-keyscan github.com >> ~/.ssh/known_hosts
+              git config --global user.name "lostars"
+              git config --global user.email "746320542jn@gmail.com"
+              git add Casks/*
+              git commit -m 'cron updates'
+              git push
+            fi
           fi
