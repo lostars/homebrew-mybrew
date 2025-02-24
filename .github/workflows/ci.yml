@@ -27,7 +27,7 @@ jobs:
             chmod 600 ~/.ssh/id_rsa
             ssh-keyscan github.com >> ~/.ssh/known_hosts
             git config --global user.name "lostars"
-            git config --global user.email "bot@minei.me"
+            git config --global user.email "746320542jn@gmail.com"
             git add Casks/*
             git commit -m 'cron updates'
             git push
