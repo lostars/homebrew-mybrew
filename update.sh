@@ -40,3 +40,5 @@ for config in $(jq -c '.config[]' "config.json"); do
 
   update "$user" "$repo" "$name" "$version"
 done
+
+exit 0
