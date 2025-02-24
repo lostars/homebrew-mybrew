@@ -30,4 +30,6 @@ jobs:
             git add Casks/*
             git commit -m 'cron updates'
             git push
+          else
+            echo 'no updates'
           fi
