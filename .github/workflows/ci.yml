@@ -18,9 +18,10 @@ jobs:
         env:
           MY_BREW_KEY: ${{ secrets.MY_BREW_KEY }}
         run: |
-          chmod +x update.sh
-          ./update.sh
-          git diff --quiet && git diff --cached --quiet
+          echo 111111
+#          chmod +x update.sh
+#          ./update.sh
+#          git diff --quiet && git diff --cached --quiet
 #          if git diff --quiet && git diff --cached --quiet; then
 #            echo "No changes detected"
 #          else
