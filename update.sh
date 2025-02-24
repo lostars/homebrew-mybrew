@@ -20,7 +20,7 @@ function update() {
       if [ "$v" == "$version" ]; then
         echo "$filename no updates current version: $version"
       else
-        sed -i '' "s/version \"$v\"/version \"$version\"/" "$filename"
+        sed -i "s/version \"$v\"/version \"$version\"/" "$filename"
         echo "$filename update version: from $v => $version"
       fi
     fi
