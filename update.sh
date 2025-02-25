@@ -1,4 +1,4 @@
-#!/usr/bin/env bash
+#!/bin/bash
 
 # update "user" "repo" "filename" "filter"
 function update() {
@@ -20,7 +20,7 @@ function update() {
       if [ "$v" == "$version" ]; then
         echo "$filename no updates current version: $version"
       else
-        sed -i '' "s/version \"$v\"/version \"$version\"/" "$filename"
+        sed -i "s/version \"$v\"/version \"$version\"/" "$filename"
         echo "true" > output/status.txt
         echo "update $repo from $v to $version" >> output/message.txt
         echo "$filename update version: from $v => $version"
