@@ -36,6 +36,11 @@ fi
 for config in $(jq -c '.config[]' "config.json"); do
   name=$(echo "$config" | jq -r '.name')
   version=$(echo "$config" | jq -r '.version')
+  autoUpdate=$(echo "$config" | jq -r '.autoUpdate')
+  if [ "$autoUpdate" == "false" ]; then
+      echo "$name disable auto update"
+      continue
+  fi
 
   repoUrl=$(sed -n 's/.*homepage "\([^"]*\)".*/\1/p' "$name")
   user=$(echo "$repoUrl" | sed -n 's|https://github.com/\([^/]*\)/\([^/]*\)|\1|p')
