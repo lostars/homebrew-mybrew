@@ -43,8 +43,8 @@ for config in $(jq -c '.config[]' "config.json"); do
   fi
 
   repoUrl=$(sed -n 's/.*homepage "\([^"]*\)".*/\1/p' "$name")
-  user=$(echo "$repoUrl" | sed -n 's|https://github.com/\([^/]*\)/\([^/]*\)|\1|p')
-  repo=$(echo "$repoUrl" | sed -n 's|https://github.com/\([^/]*\)/\([^/]*\)|\2|p')
-
-  update "$user" "$repo" "$name" "$version"
+  if [[ "$repoUrl" == https://github.com* ]]; then
+    user=$(echo "$repoUrl" | sed -n 's|https://github.com/\([^/]*\)/\([^/]*\)|\1|p')
+    repo=$(echo "$repoUrl" | sed -n 's|https://github.com/\([^/]*\)/\([^/]*\)|\2|p')
+  fi
 done
