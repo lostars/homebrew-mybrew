@@ -46,5 +46,6 @@ for config in $(jq -c '.config[]' "config.json"); do
   if [[ "$repoUrl" == https://github.com* ]]; then
     user=$(echo "$repoUrl" | sed -n 's|https://github.com/\([^/]*\)/\([^/]*\)|\1|p')
     repo=$(echo "$repoUrl" | sed -n 's|https://github.com/\([^/]*\)/\([^/]*\)|\2|p')
+    update "$user" "$repo" "$name" "$version"
   fi
 done
