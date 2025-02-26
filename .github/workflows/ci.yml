@@ -17,7 +17,11 @@ jobs:
         run: |
           chmod +x update.sh
           ./update.sh
-          status=$(cat output/status.txt)
+          status=""
+          statusFile=output/status.txt
+          if [ -f "$statusFile" ]; then
+            status=$(cat "$statusFile")
+          fi
           if [ "$status" == "true" ]; then
             mkdir -p ~/.ssh
             echo "$MY_BREW_KEY" > ~/.ssh/id_rsa
