@@ -1,4 +1,4 @@
-cask "Ryujinx" do
+cask "ryujinx-emulator" do
   version "1.2.82"
   url "https://github.com/Ryubing/Ryujinx/releases/download/#{version}/ryujinx-#{version}-macos_universal.app.tar.gz"
   name "Ryujinx"
