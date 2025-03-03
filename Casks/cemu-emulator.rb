@@ -7,4 +7,7 @@ cask "cemu-emulator" do
 
   app "Cemu.app"
 
+  zap trash: [
+    "~/Library/Application Support/Cemu"
+  ]
 end
