@@ -20,7 +20,11 @@ function update() {
       if [ "$v" == "$version" ]; then
         echo "$filename no updates current version: $version"
       else
-        sed -i "s/version \"$v\"/version \"$version\"/" "$filename"
+        if [[ "$os" == "Darwin" ]]; then
+          sed -i '' "s/version \"$v\"/version \"$version\"/" "$filename"
+        else
+          sed -i "s/version \"$v\"/version \"$version\"/" "$filename"
+        fi
         echo "true" > output/status.txt
         echo "update $repo from $v to $version" >> output/message.txt
         echo "$filename update version: from $v => $version"
@@ -32,6 +36,8 @@ function update() {
 if [ ! -d "output" ]; then
     mkdir "output"
 fi
+
+os=$(uname -s)
 
 for config in $(jq -c '.config[]' "config.json"); do
   name=$(echo "$config" | jq -r '.name')
