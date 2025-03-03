@@ -7,4 +7,7 @@ cask "ryujinx-emulator" do
 
   app "Ryujinx.app"
 
+  zap trash: [
+    "~/Library/Application Support/Ryujinx"
+  ]
 end
