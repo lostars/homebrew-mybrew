@@ -9,7 +9,7 @@ function update() {
 
   url="https://api.github.com/repos/${user}/${repo}/releases"
   output="output/${user}-${repo}.json"
-  curl -o "${output}" "$url"
+  curl -s -o "${output}" "$url"
 
   for asset in $(jq -c 'map(select(.prerelease == false)) | .[0] | .assets[]' "${output}"); do
     name=$(echo "$asset" | jq -r '.name')
