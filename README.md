@@ -5,6 +5,7 @@ Brew those not in homebrew core and cask.
 
 * [simple_live](https://github.com/xiaoyaocz/dart_simple_live)
 * [cemu emulator](https://github.com/cemu-project/Cemu)
-* [ryujinx](https://github.com/Ryubing)
+* [ryujinx(stable and canary)](https://github.com/Ryubing)
+* [NX Optimizer](https://github.com/MaxLastBreath/nx-optimizer)
 
 ## Formula
