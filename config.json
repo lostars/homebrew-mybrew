@@ -1,6 +1,10 @@
 {
   "config": [
     {
+      "name": "Casks/nx-optimizer.rb",
+      "version": "_([0-9]\\.[0-9]+\\.[0-9]+)_MacOS_.*\\.zip"
+    },
+    {
       "name": "Casks/ryujinx-emulator.rb",
       "version": "-([0-9]\\.[0-9]+\\.[0-9]+)-macos.*\\.gz"
     },
