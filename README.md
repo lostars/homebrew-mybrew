@@ -7,5 +7,6 @@ Brew those not in homebrew core and cask.
 * [cemu emulator](https://github.com/cemu-project/Cemu)
 * [ryujinx(stable and canary)](https://github.com/Ryubing)
 * [NX Optimizer](https://github.com/MaxLastBreath/nx-optimizer)
+* [Final Cut Pro Trial](https://www.apple.com/final-cut-pro/)
 
 ## Formula
