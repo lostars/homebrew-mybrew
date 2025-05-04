@@ -1,4 +1,4 @@
-class FfprobeATosxexperts < Formula
+class FfmpegOsxexperts < Formula
   desc "FFmpeg static builds from OSXExperts"
   homepage "https://www.osxexperts.net/"
 
@@ -8,14 +8,14 @@ class FfprobeATosxexperts < Formula
   if Hardware::CPU.arm?
     version = ARM_VERSION.tr('.', '')
     url "https://www.osxexperts.net/ffmpeg#{version}arm.zip"
-    sha256 "ae77d6751f4db81098a11dcc966a8d098925411430169475c8f8a7bfad76188b"
+    sha256 "011221d75eae36943b5a6a28f70e25928cfb5602fe616d06da0a3b9b55ff6b75"
   else
     version = INTEL_VERSION.tr('.', '')
     url "https://www.osxexperts.net/ffmpeg#{version}intel.zip"
-    sha256 "ce5414269f0efa1e88b5e23b57f801d5b9a40be554716544936e0332b4601a62"
+    sha256 "4a4a968b98859588e98500ae25973d80a5ca5eed0724222b9f76360dcb72a001"
   end
 
   def install
-    bin.install Dir["ffprobe"]
+    bin.install Dir["ffmpeg"]
   end
 end
