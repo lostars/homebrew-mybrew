@@ -1,6 +1,7 @@
 class FfmpegOsxexperts < Formula
   desc "FFmpeg static builds from OSXExperts"
   homepage "https://www.osxexperts.net/"
+  version ""
 
   ARM_VERSION = "7.1.1"
   INTEL_VERSION = "7.1"
