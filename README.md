@@ -10,3 +10,5 @@ Brew those not in homebrew core and cask.
 * [Final Cut Pro Trial](https://www.apple.com/final-cut-pro/)
 
 ## Formula
+
+* [ffmpeg and ffprobe static build from osxexperts](https://www.osxexperts.net/)
