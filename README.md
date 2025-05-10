@@ -12,3 +12,4 @@ Brew those not in homebrew core and cask.
 ## Formula
 
 * [ffmpeg and ffprobe static build from osxexperts](https://www.osxexperts.net/)
+* [qbit-cli](https://github.com/lostars/qbit-cli)
