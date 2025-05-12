@@ -2,7 +2,7 @@
   "config": [
     {
       "name": "Formula/qbit-cli.rb",
-      "version": "_([0-9]\\.[0-9]+\\.[0-9]+)_darwin_arm64.tar\\.gz"
+      "version": "_([0-9]\\.[0-9]+\\.[0-9]+)_darwin_arm64\\.tar\\.gz"
     },
     {
       "name": "Casks/nx-optimizer.rb",

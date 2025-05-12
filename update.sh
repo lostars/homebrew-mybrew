@@ -11,12 +11,12 @@ function update() {
   output="output/${user}-${repo}.json"
   curl -s -o "${output}" "$url"
 
-  for asset in $(jq -c 'map(select(.prerelease == false)) | .[0] | .assets[]' "${output}"); do
+  jq -c 'map(select(.prerelease == false)) | .[0] | .assets[]' "${output}" | while read -r asset; do
     name=$(echo "$asset" | jq -r '.name')
     if [[ $name =~ $filter ]]; then
       version="${BASH_REMATCH[1]}"
 
-      v=$(sed -n 's/.*version "\([^"]*\)".*/\1/p' $filename)
+      v=$(sed -n 's/.*version "\([^"]*\)".*/\1/p' "$filename")
       if [ "$v" == "$version" ]; then
         echo "$filename no updates current version: $version"
       else
