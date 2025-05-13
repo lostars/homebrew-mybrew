@@ -30,6 +30,7 @@ jobs:
             git config --global user.name "lostars"
             git config --global user.email "746320542jn@gmail.com"
             git add Casks/*
+            git add Formula/*
             message=$(cat output/message.txt)
             git commit -m "$message"
             git push git@github.com:${{ github.repository }}.git
