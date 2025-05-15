@@ -1,5 +1,5 @@
 cask "ryujinx-emulator@canary" do
-  version "1.3.41"
+  version "1.3.44"
   url "https://github.com/Ryubing/Canary-Releases/releases/download/#{version}/ryujinx-#{version}-macos_universal.app.tar.gz"
   name "Ryujinx"
   desc "Ryujinx is an open-source Nintendo Switch emulator, originally created by gdkchan, written in C#"
