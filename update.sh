@@ -26,8 +26,8 @@ function update() {
           sed -i "s/version \"$v\"/version \"$version\"/" "$filename"
         fi
         echo "true" > output/status.txt
-        echo "update $repo from $v to $version" >> output/message.txt
-        echo "$filename update version: from $v => $version"
+        echo "$filename update $repo from $v to $version" >> output/message.txt
+        echo "$filename update $repo from $v to $version"
       fi
     fi
   done
