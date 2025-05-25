@@ -9,6 +9,7 @@ class QbitCli < Formula
 
   def install
     bin.install "qbit"
+    generate_completions_from_executable(bin/"qbit", "completion")
   end
 
 end
