@@ -27,8 +27,8 @@ jobs:
             echo "$MY_BREW_KEY" > ~/.ssh/id_rsa
             chmod 600 ~/.ssh/id_rsa
             ssh-keyscan github.com >> ~/.ssh/known_hosts
-            git config --global user.name "lostars"
-            git config --global user.email "746320542jn@gmail.com"
+            git config --global user.name "github-actions[bot]"
+            git config --global user.email "41898282+github-actions[bot]@users.noreply.github.com"
                
             while IFS= read -r line; do
               changed_file=$(echo "$line" | awk '{print $1}')
