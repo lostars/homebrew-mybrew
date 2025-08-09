@@ -1,6 +1,6 @@
 cask "final-cut-pro" do
-  version "11.1"
-  url "https://secure-appldnld.apple.com/Final_Cut_Pro_X/082-09025-20250325-cec17631-72bd-46d7-bfa9-69c64a3bf721/FinalCutProTrial.dmg"
+  version "11.1.1"
+  url "https://secure-appldnld.apple.com/Final_Cut_Pro_X/082-42810-20250520-d7183f76-a105-4af1-a4b1-0f670d6fd97f/FinalCutProTrial.dmg"
   name "final-cut-pro"
   desc "Final Cut Pro 11. Simply intelligent."
   homepage "https://www.apple.com/final-cut-pro/"
