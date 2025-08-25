@@ -1,6 +1,10 @@
 {
   "config": [
     {
+      "name": "Formula/tinypng-cli.rb",
+      "version": "_([0-9]\\.[0-9]+\\.[0-9]+)_darwin_arm64\\.tar\\.gz"
+    },
+    {
       "name": "Formula/qbit-cli.rb",
       "version": "_([0-9]\\.[0-9]+\\.[0-9]+)_darwin_arm64\\.tar\\.gz"
     },
