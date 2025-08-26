@@ -13,3 +13,4 @@ Brew those not in homebrew core and cask.
 
 * [ffmpeg and ffprobe static build from osxexperts](https://www.osxexperts.net/)
 * [qbit-cli](https://github.com/lostars/qbit-cli)
+* [tinypng-cli](https://github.com/lostars/tinypng-cli)
