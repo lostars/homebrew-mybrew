@@ -5,7 +5,9 @@ cask "ryujinx-emulator@canary" do
   desc "Ryujinx is an open-source Nintendo Switch emulator, originally created by gdkchan, written in C#"
   homepage "https://git.ryujinx.app/ryubing/canary"
 
-  app "Ryujinx(Canary).app"
+  app "Ryujinx.app"
+
+  conflicts_with cask: ["ryujinx-emulator"]
 
   zap trash: [
     "~/Library/Application Support/Ryujinx"

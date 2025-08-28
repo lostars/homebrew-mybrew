@@ -7,6 +7,8 @@ cask "ryujinx-emulator" do
 
   app "Ryujinx.app"
 
+  conflicts_with cask: ["ryujinx-emulator@canary"]
+
   zap trash: [
     "~/Library/Application Support/Ryujinx"
   ]
