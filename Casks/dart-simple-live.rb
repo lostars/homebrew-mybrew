@@ -1,5 +1,5 @@
 cask "dart-simple-live" do
-  version "1.9.1"
+  version "1.9.2"
   version_with_zeros = version.tr('.', '0')
   url "https://github.com/lostars/dart_simple_live/releases/download/v#{version}/simple_live_app-#{version}+#{version_with_zeros}-macos.dmg"
   name "simple_live"
