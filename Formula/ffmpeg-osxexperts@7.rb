@@ -1,4 +1,4 @@
-class FfmpegOsxexperts < Formula
+class FfmpegOsxexperts@7 < Formula
   desc "FFmpeg static builds from OSXExperts"
   homepage "https://www.osxexperts.net/"
 
