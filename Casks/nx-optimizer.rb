@@ -1,5 +1,5 @@
 cask "nx-optimizer" do
-  version "3.1.6"
+  version "3.2.0"
   arc = Hardware::CPU.intel? ? "Intel" : "Silicon"
   url "https://github.com/MaxLastBreath/nx-optimizer/releases/download/manager-#{version}/NX_Optimizer_#{version}_MacOS_#{arc}.zip"
   name "nx-optimizer"
