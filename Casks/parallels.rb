@@ -35,8 +35,6 @@ cask "parallels" do
   preflight do
     system_command "chflags",
                    args: ["nohidden", "#{staged_path}/Parallels Desktop.app"]
-    system_command "xattr",
-                   args: ["-d", "com.apple.FinderInfo", "#{staged_path}/Parallels Desktop.app"]
   end
 
   postflight do
