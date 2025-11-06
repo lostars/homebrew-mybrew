@@ -1,7 +1,7 @@
 cask "parallels" do
   version "26.1.1-57288"
 
-  url "https://raw.githubusercontent.com/lostars/homebrew-mybrew/refs/heads/main/assets/ParallelsDesktop_26_1_1_57288_Release_2025_10_30_qiuchenly.dmg"
+  url "~/Downloads/ParallelsDesktop_26_1_1_57288_Release_2025_10_30_qiuchenly.dmg"
   name "Parallels Desktop"
   desc "Desktop virtualization software From Qiuchenly"
   homepage "https://www.parallels.com/products/desktop/"
