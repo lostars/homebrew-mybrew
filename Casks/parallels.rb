@@ -1,7 +1,7 @@
 cask "parallels" do
   version "26.1.1-57288"
 
-  url "~/Downloads/ParallelsDesktop_26_1_1_57288_Release_2025_10_30_qiuchenly.dmg"
+  url "https://nas.minei.me:15221/sd/nma5odFO/"
   name "Parallels Desktop"
   desc "Desktop virtualization software From Qiuchenly"
   homepage "https://www.parallels.com/products/desktop/"
