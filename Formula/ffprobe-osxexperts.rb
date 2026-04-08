@@ -3,7 +3,7 @@ class FfprobeOsxexperts < Formula
   homepage "https://www.osxexperts.net/"
 
   if Hardware::CPU.arm?
-    version "8.0"
+    version "8.1"
     url "https://www.osxexperts.net/ffprobe#{version.to_s.gsub('.', '')}arm.zip"
   else
     version "8.0"
