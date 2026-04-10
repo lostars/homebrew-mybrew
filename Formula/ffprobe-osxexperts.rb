@@ -2,6 +2,8 @@ class FfprobeOsxexperts < Formula
   desc "FFmpeg static builds from OSXExperts"
   homepage "https://www.osxexperts.net/"
 
+  depends_on :macos
+
   if Hardware::CPU.arm?
     version "8.1"
     url "https://www.osxexperts.net/ffprobe#{version.to_s.gsub('.', '')}arm.zip"
