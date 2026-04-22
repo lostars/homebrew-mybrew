@@ -9,11 +9,9 @@ class Neovim < Formula
   depends_on :macos
 
   def install
-    cd Dir["nvim-macos-arm64"].first do
-      bin.install Dir["bin/*"]
-      lib.install Dir["lib/*"]   if Dir.exist?("lib")
-      share.install Dir["share/*"] if Dir.exist?("share")
-    end
+    bin.install Dir["bin/*"]
+    lib.install Dir["lib/*"]   if Dir.exist?("lib")
+    share.install Dir["share/*"] if Dir.exist?("share")
   end
 
 end
