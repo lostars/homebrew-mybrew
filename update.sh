@@ -12,7 +12,7 @@ function update() {
   curl -s -o "${output}" "$url"
 
   jq -c 'map(select(.prerelease == false)) | .[0] | .assets[]' "${output}" | while read -r asset; do
-    name=$(echo "$asset" | jq -r '.name')
+    name=$(echo "$asset" | jq -r '.browser_download_url')
     if [[ $name =~ $filter ]]; then
       version="${BASH_REMATCH[1]}"
 
@@ -98,6 +98,7 @@ for config in $(jq -c '.config[]' "config.json"); do
   fi
 
   repoUrl=$(sed -n 's/.*homepage "\([^"]*\)".*/\1/p' "$name")
+  echo "$repoUrl"
   if [[ "$repoUrl" == https://github.com* ]]; then
     user=$(echo "$repoUrl" | sed -n 's|https://github.com/\([^/]*\)/\([^/]*\)|\1|p')
     repo=$(echo "$repoUrl" | sed -n 's|https://github.com/\([^/]*\)/\([^/]*\)|\2|p')
