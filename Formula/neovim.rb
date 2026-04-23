@@ -3,6 +3,7 @@ class Neovim < Formula
   homepage "https://github.com/neovim/neovim"
   license "Apache-2.0"
   version "0.12.2"
+  sha256 "eeddee1009734f9071266e6b1b8a70308cb60cbcc45f5e1c1023adc471450fee"
   url "https://github.com/neovim/neovim/releases/download/v#{version}/nvim-macos-arm64.tar.gz"
 
   depends_on arch: :arm64

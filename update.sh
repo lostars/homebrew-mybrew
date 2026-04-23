@@ -13,17 +13,27 @@ function update() {
 
   jq -c 'map(select(.prerelease == false)) | .[0] | .assets[]' "${output}" | while read -r asset; do
     name=$(echo "$asset" | jq -r '.browser_download_url')
+    digest=$(echo "$asset" | jq -r ".digest")
     if [[ $name =~ $filter ]]; then
       version="${BASH_REMATCH[1]}"
 
       v=$(sed -n 's/.*version "\([^"]*\)".*/\1/p' "$filename")
+      oldsha=$(sed -n 's/.*sha256 "\([^"]*\)".*/\1/p' "$filename")
       if [ "$v" == "$version" ]; then
         echo "$filename no updates current version: $version"
       else
         if [[ "$os" == "Darwin" ]]; then
           sed -i '' "s/version \"$v\"/version \"$version\"/" "$filename"
+          if [[ -n "$digest" ]]; then
+            checksum=$(echo "$asset" | jq -r ".digest | split(\":\") | .[1]")
+            sed -i '' "s/sha256 \"$oldsha\"/sha256 \"$checksum\"/" "$filename"
+          fi
         else
           sed -i "s/version \"$v\"/version \"$version\"/" "$filename"
+          if [[ -n "$digest" ]]; then
+            checksum=$(echo "$asset" | jq -r ".digest | split(\":\") | .[1]")
+            sed -i "s/sha256 \"$oldsha\"/sha256 \"$checksum\"/" "$filename"
+          fi
         fi
         echo "true" > output/status.txt
         echo "$filename update $repo from $v to $version" >> output/message.txt
@@ -98,7 +108,6 @@ for config in $(jq -c '.config[]' "config.json"); do
   fi
 
   repoUrl=$(sed -n 's/.*homepage "\([^"]*\)".*/\1/p' "$name")
-  echo "$repoUrl"
   if [[ "$repoUrl" == https://github.com* ]]; then
     user=$(echo "$repoUrl" | sed -n 's|https://github.com/\([^/]*\)/\([^/]*\)|\1|p')
     repo=$(echo "$repoUrl" | sed -n 's|https://github.com/\([^/]*\)/\([^/]*\)|\2|p')
