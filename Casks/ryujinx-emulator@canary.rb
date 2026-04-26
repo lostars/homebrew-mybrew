@@ -4,6 +4,7 @@ cask "ryujinx-emulator@canary" do
   name "Ryujinx"
   desc "Ryujinx is an open-source Nintendo Switch emulator, originally created by gdkchan, written in C#"
   homepage "https://git.ryujinx.app/ryubing/canary"
+  depends_on :macos
 
   app "Ryujinx.app"
 

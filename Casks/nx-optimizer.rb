@@ -6,6 +6,7 @@ cask "nx-optimizer" do
   name "nx-optimizer"
   desc "NX-Optimizer (Known As TOTK-Optimizer) is a Mod Manager for UltraCam, a code injection mod for the following Games: The Legend of Zelda: Tears of the Kingdom, Breath Of The Wild, Echoes Of Wisdom, Link's Awakening and More"
   homepage "https://github.com/MaxLastBreath/nx-optimizer"
+  depends_on :macos
 
   app "NX Optimizer.app"
 

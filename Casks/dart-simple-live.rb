@@ -7,6 +7,8 @@ cask "dart-simple-live" do
   desc "简简单单的看直播"
   homepage "https://github.com/lostars/dart_simple_live"
 
+  depends_on :macos
+  
   app "Simple Live.app"
 
   zap trash: [

@@ -5,7 +5,8 @@ cask "cemu-emulator" do
   name "cemu-emulator"
   desc "Cemu - Wii U emulator"
   homepage "https://github.com/cemu-project/Cemu"
-
+  depends_on :macos
+  
   app "Cemu.app"
 
   zap trash: [
