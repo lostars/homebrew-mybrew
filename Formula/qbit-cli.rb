@@ -1,8 +1,8 @@
 class QbitCli < Formula
   desc "Another qBittorrent CLI"
   homepage "https://github.com/lostars/qbit-cli"
-  version "0.13.1"
-  sha256 "c90848b55b4145da447d3154e7522a063b38aa9e2c468bb685e93ea51accc2c8"
+  version "0.13.2"
+  sha256 "f76b8b6a9ff6512aae77b4248a6ddf727ef9947c67647580ff90655a08a22bc9"
   url "https://github.com/lostars/qbit-cli/releases/download/v#{version}/qbit_#{version}_darwin_arm64.tar.gz"
 
   depends_on arch: :arm64
