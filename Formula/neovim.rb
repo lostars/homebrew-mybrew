@@ -2,8 +2,8 @@ class Neovim < Formula
   desc "Ambitious Vim-fork focused on extensibility and agility"
   homepage "https://github.com/neovim/neovim"
   license "Apache-2.0"
-  version "0.12.5"
-  sha256 "65fb000099e47ca1b762584c484cc833f40e30851a0ec450d4174e16317c1f9b"
+  version "0.12.6"
+  sha256 "1dbd148222b051ba6c307c4d17a318ed083df018a4f6a5a0ce46955ffc9ab87b"
   url "https://github.com/neovim/neovim/releases/download/v#{version}/nvim-macos-arm64.tar.gz"
 
   depends_on arch: :arm64
